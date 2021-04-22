@@ -6,8 +6,8 @@
 
 <h3>  How to start </h3>
 <ul> 
-  <b>1.1:<b> <p> Yarn or NPM to install packages</p>
-  <b>1.2</b> Yarns start or npm start  to init server(for standard, will run on 3000 port)</p>
+  <b>1.1:<b> <p> yarn or npm install to install packages</p>
+  <b>1.2</b> yarn start or npm start  to init server(for standard, will run on 3000 port)</p>
 <ul> 
  
   
