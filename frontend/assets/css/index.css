@@ -31,6 +31,7 @@ header{
 }
 .userfull-links ul li a{
    cursor: pointer;
+   text-transform: uppercase;
 }
 .userfull-links ul li a:hover{
     color: rgb(0, 0, 0, 0.6);

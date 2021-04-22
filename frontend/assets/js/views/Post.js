@@ -14,10 +14,12 @@ export default class extends SuperPage {
     {
         let data;
         try{
-            data = await this.makeHttpRequest(this.apiUrl, '/v1/post/clique/'+ postId);
+            data = await this.makeHttpRequest(this.apiUrl, 'post/clique/'+ postId);
         }catch(e){
             console.log(e);
         }
+        console.log(data);
+
         if (openNewTab) window.open(data.url);
         else window.location.href = data.url;
     }

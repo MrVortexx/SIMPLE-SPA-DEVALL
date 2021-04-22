@@ -1,7 +1,7 @@
 import Post from './views/Post.js';
 import BlogAbout from './views/BlogAbout.js';
 
-function sowMoreBtn( onClickCallBack)
+function makeShowMoreBtn( onClickCallBack)
 {
     const showMoreBtn = document.createElement('button');
     showMoreBtn.setAttribute("id", "load-more-btn");
@@ -12,7 +12,8 @@ function sowMoreBtn( onClickCallBack)
 
     return showMoreBtn;
 }
-function searchDiv(onClickCallBack){
+
+function makeSearchDiv(onClickCallBack){
     let searchDiv, searchInput, searchBtn;
     searchDiv = document.createElement('div')
     searchDiv.classList.add("search-form");
@@ -62,7 +63,7 @@ function clearElement(element)
 
     this.setPosts = async () => {
         if (!showMoreBtn){
-            showMoreBtn = sowMoreBtn(this.setPosts);
+            showMoreBtn = makeShowMoreBtn(this.setPosts);
             app.insertAdjacentElement('beforeend', showMoreBtn);
         }
         showMoreBtn.classList.add('dont-show');
@@ -92,7 +93,7 @@ function clearElement(element)
     }
 
     if (source != 'blog-about'){
-        searchDiv = searchDiv(this.searchPosts);
+        let searchDiv = makeSearchDiv(this.searchPosts);
         app.insertAdjacentElement('afterbegin', searchDiv);
     }
  
